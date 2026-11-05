@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>Moje zakupy</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2218%22 fill=%22%23315d47%22/%3E%3Cpath d=%22M15 23h34l-3.5 26h-27L15 23Zm11 1v-7a6 6 0 0 1 12 0v7%22 fill=%22none%22 stroke=%22white%22 stroke-width=%224%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+    :root{--paper:#f6f4ee;--ink:#242b25;--muted:#778078;--line:#e7e6df;--green:#315d47;--shadow:0 18px 50px #2636290c;--breakfast:#efa84d;--second:#a990d4;--snack:#ef8293;--dinner:#6da98c}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}button,input{font:inherit}.shell{max-width:1100px;margin:auto;padding:38px 28px 64px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}.brand{display:flex;gap:11px;align-items:center;font-weight:700;letter-spacing:-.04em}.logo{width:36px;height:36px;border-radius:12px;background:var(--green);display:grid;place-items:center;color:white;font-size:19px}.brand span{font-size:18px}.top-note{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}.hero{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:29px}.eyebrow{font-size:12px;color:var(--green);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}.hero h1{font:800 clamp(38px,6vw,62px)/1.04 Manrope,sans-serif;letter-spacing:-.065em;margin:0}.hero h1 em{font-style:normal;color:#91a18f}.sub{margin:14px 0 0;color:var(--muted);font-size:15px}.day-control{background:white;border:1px solid var(--line);padding:8px 12px;border-radius:15px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);white-space:nowrap}.day-control label{font-size:12px;color:var(--muted)}.day-control input{width:44px;border:0;outline:0;font-size:16px;font-weight:700;color:var(--green);text-align:center}.summary{display:flex;align-items:center;gap:14px;margin:0 0 22px}.meter{height:6px;background:#e5e5dc;border-radius:8px;flex:1;overflow:hidden}.meter>div{height:100%;background:var(--green);width:0;transition:width .25s}.summary-text{font-size:13px;color:var(--muted);white-space:nowrap}.layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:20px;align-items:start}.list-card,.bought-card{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.list-card{padding:9px 24px}.category{padding:18px 0 9px}.category+.category{border-top:1px solid #f0efe9}.category-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}.cat-title{display:flex;align-items:center;gap:9px;font:800 12px Manrope,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#556354;background:#f5f6f1;padding:8px 11px;border-radius:8px}.cat-icon{display:none}.cat-count{font-size:11px;color:#9b9e96}.item{min-height:49px;display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:12px;align-items:center;border-radius:12px;padding:5px 7px;transition:opacity .2s,background .2s}.item:hover{background:#f9f9f5}.item-name{font-size:14px;font-weight:500}.item-qty{font-size:12px;color:#737c72;white-space:nowrap}.item-meals{display:inline-flex;vertical-align:middle;gap:5px;margin-left:9px;flex-wrap:wrap}.meal-dot{display:inline-flex;align-items:center;padding:2px 0;color:#8a9288;font-size:9px;font-weight:500;font-style:normal;line-height:1;white-space:nowrap}.meal-dot:before{content:"·";color:#b4bbb0;margin:0 4px 0 0}.meal-breakfast{color:#a8772e}.meal-second{color:#8671aa}.meal-snack{color:#bd6676}.meal-dinner{color:#54836b}.item-icon{display:inline-grid;place-items:center;width:25px;height:25px;margin-right:7px;border-radius:8px;background:#f3f4ef;font-size:15px;vertical-align:middle}.check{appearance:none;width:19px;height:19px;border:1.5px solid #c9cec7;border-radius:6px;margin:0;cursor:pointer;display:grid;place-items:center;transition:.18s}.check:checked{background:var(--green);border-color:var(--green)}.check:checked:after{content:'✓';font-size:13px;line-height:1;color:#fff}.item.done .item-name,.item.done .item-qty{text-decoration:line-through;color:#aab0a8}.item.done{opacity:.55}.side{display:grid;gap:14px}.legend-card{padding:20px 19px}.panel-title{font:700 14px Manrope,sans-serif;margin:0 0 16px}.legend{display:grid;grid-template-columns:1fr 1fr;gap:13px 7px}.legend-row{display:flex;align-items:center;gap:8px;color:#636d64;font-size:12px}.swatch{width:9px;height:9px;border-radius:50%}.bought-card{padding:19px}.bought-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.bought-head .panel-title{margin:0}.bought-num{background:#edf2ec;color:var(--green);font-size:11px;font-weight:700;padding:4px 8px;border-radius:9px}.empty{color:#9a9f98;font-size:12px;line-height:1.6;margin:12px 0 2px}.bought-list{display:grid;gap:3px}.bought-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid #f2f1ec;font-size:12px;color:#6e786e}.restore{border:0;background:transparent;color:#9ca39a;cursor:pointer;font-size:16px;padding:0 4px}.restore:hover{color:var(--green)}.reset{border:0;background:transparent;padding:10px 0 0;color:#a0a49e;font-size:11px;cursor:pointer}.reset:hover{color:#a45555}.foot{display:flex;align-items:center;justify-content:space-between;color:#9a9f98;font-size:11px;margin-top:18px;padding:0 4px}.status{color:var(--green)}@media(max-width:760px){.shell{padding:22px 16px 44px}.top{margin-bottom:38px}.top-note{display:none}.hero{align-items:start;flex-direction:column}.day-control{align-self:flex-start}.layout{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr}.list-card{padding:8px 14px}.item{grid-template-columns:22px minmax(0,1fr) auto;gap:8px}.item-name{font-size:13px}.legend-card,.bought-card{padding:16px}.legend{grid-template-columns:1fr 1fr}}@media(max-width:430px){.side{grid-template-columns:1fr}.foot{align-items:start;gap:8px;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.5 12h-13L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/><path d="M8 12h8"/></svg></div><span>Moje zakupy</span></div></header>
+    <div class="day-control" style="width:max-content;margin-bottom:20px"><label for="days">Na</label><input id="days" type="number" min="1" max="30" value="2"><label for="days">dni</label></div>
+    <div class="summary"><div class="meter"><div id="progress"></div></div><div class="summary-text" id="summary">0 z 0 kupionych</div></div>
+    <div class="layout"><section class="list-card" id="shopping-list" aria-label="Lista zakupów"></section><aside class="side"><section class="bought-card"><div class="bought-head"><h2 class="panel-title">W koszyku</h2><span class="bought-num" id="bought-count">0</span></div><div id="bought-list" class="bought-list"></div><button class="reset" id="reset">Odznacz wszystkie</button></section></aside></div>
+    <footer class="foot"><span>Lista zapisuje się automatycznie na tym urządzeniu.</span><span class="status" id="status">Gotowa na zakupy</span></footer>
+  </main>
+  <script>
+    const meals={breakfast:{name:'Śniadanie',color:'var(--breakfast)'},second:{name:'Drugie śniadanie',color:'var(--second)'},snack:{name:'Przekąska',color:'var(--snack)'},dinner:{name:'Kolacja',color:'var(--dinner)'}};
+    // Ilości są podane dla 2 dni; zmiana liczby dni przelicza je proporcjonalnie.
+    const products=[
+      {id:'bread',name:'Chleb żytni',amount:1,unit:'bochenek',category:'Pieczywo',icon:'🥖',meals:['breakfast']},
+      {id:'eggs',name:'Jajka',amount:8,unit:'szt.',category:'Nabiał i jajka',icon:'🥚',meals:['breakfast']},
+      {id:'cream',name:'Śmietana',amount:1,unit:'opak.',category:'Nabiał i jajka',icon:'🥣',meals:['breakfast']},
+      {id:'activia',name:'Jogurt naturalny Activia',amount:2,unit:'szt.',category:'Nabiał i jajka',icon:'🍶',meals:['breakfast']},
+      {id:'lettuce',name:'Sałata',amount:1,unit:'szt.',category:'Warzywa',icon:'🥬',meals:['breakfast']},
+      {id:'radish',name:'Rzodkiewki',amount:1,unit:'pęczek',category:'Warzywa',icon:'🌱',meals:['breakfast']},
+      {id:'pickles',name:'Ogórki kiszone',amount:1,unit:'słoik',category:'Warzywa',icon:'🫙',meals:['breakfast']},
+      {id:'oats',name:'Płatki owsiane',amount:200,unit:'g',category:'Produkty sypkie',icon:'🌾',meals:['second']},
+      {id:'milk',name:'Mleko',amount:800,unit:'ml',category:'Nabiał i jajka',icon:'🥛',meals:['second']},
+      {id:'blueberries',name:'Borówki',amount:100,unit:'g',category:'Owoce',icon:'🫐',meals:['second']},
+      {id:'nuts',name:'Orzechy',amount:50,unit:'g',category:'Produkty sypkie',icon:'🥜',meals:['second']},
+      {id:'seeds',name:'Nasiona chia i sezamu',amount:1,unit:'porcja',category:'Produkty sypkie',icon:'🫘',meals:['second']},
+      {id:'coconut',name:'Wiórki kokosowe',amount:1,unit:'porcja',category:'Produkty sypkie',icon:'🥥',meals:['second']},
+      {id:'chocolate',name:'Gorzka czekolada',amount:1,unit:'tabliczka',category:'Słodycze i dodatki',icon:'🍫',meals:['second']},
+      {id:'apples',name:'Jabłka',amount:2,unit:'szt.',category:'Owoce',icon:'🍎',meals:['snack']},
+      {id:'bananas',name:'Banany',amount:2,unit:'szt.',category:'Owoce',icon:'🍌',meals:['snack']},
+      {id:'orange',name:'Pomarańcza',amount:1,unit:'szt.',category:'Owoce',icon:'🍊',meals:['snack']},
+      {id:'kiwi',name:'Kiwi',amount:2,unit:'szt.',category:'Owoce',icon:'🥝',meals:['snack']},
+      {id:'chicken',name:'Pierś z kurczaka',amount:400,unit:'g',category:'Mięso',icon:'🍗',meals:['dinner']},
+      {id:'onion',name:'Czerwona cebula',amount:1,unit:'mała szt.',category:'Warzywa',icon:'🧅',meals:['dinner']},
+      {id:'cucumber',name:'Ogórek długi',amount:1,unit:'szt.',category:'Warzywa',icon:'🥒',meals:['dinner']},
+      {id:'chickpeas',name:'Ciecierzyca',amount:1,unit:'słoik',category:'Produkty sypkie',icon:'🫛',meals:['dinner']},
+      {id:'tomato',name:'Pomidor',amount:1,unit:'szt.',category:'Warzywa',icon:'🍅',meals:['dinner']},
+      {id:'carrot',name:'Marchewka',amount:1,unit:'mała szt.',category:'Warzywa',icon:'🥕',meals:['dinner']},
+      {id:'parsley',name:'Natka pietruszki',amount:1,unit:'duży pęczek',category:'Warzywa',icon:'🌿',meals:['dinner']},
+      {id:'plain-yogurt',name:'Jogurt naturalny zwykły',amount:1,unit:'opak.',category:'Nabiał i jajka',icon:'🥄',meals:['dinner']}
+    ];
+    const categories=['Warzywa','Owoce','Nabiał i jajka','Mięso','Pieczywo','Produkty sypkie','Słodycze i dodatki'];
+    const saved=(()=>{try{return JSON.parse(localStorage.getItem('na-liscie-v1')||'{}')}catch{return {}}})();
+    let purchased=new Set(saved.purchased||[]);let days=Number(saved.days)||2;
+    const dayInput=document.querySelector('#days');dayInput.value=days;
+    const fmt=n=>Number.isInteger(n)?String(n):String(Math.round(n*10)/10).replace('.',',');
+    function quantity(p){const n=p.amount*days/2;return `${fmt(n)} ${p.unit}`}
+    function persist(){localStorage.setItem('na-liscie-v1',JSON.stringify({days,purchased:[...purchased]}))}
+    function render(){const root=document.querySelector('#shopping-list');root.innerHTML='';let pending=0,bought=0;
+      for(const category of categories){const rows=products.filter(p=>p.category===category&&!purchased.has(p.id));const doneRows=products.filter(p=>p.category===category&&purchased.has(p.id));if(!rows.length&&!doneRows.length)continue;
+        const section=document.createElement('section');section.className='category';section.innerHTML=`<div class="category-head"><div class="cat-title">${category}</div><span class="cat-count">${rows.length} ${rows.length===1?'produkt':'produktów'}</span></div>`;
+        for(const p of [...rows,...doneRows]){const done=purchased.has(p.id);done?bought++:pending++;const row=document.createElement('label');row.className=`item${done?' done':''}`;row.innerHTML=`<input class="check" type="checkbox" ${done?'checked':''} aria-label="${done?'Przywróć':'Kup'}: ${p.name}"><span class="item-name"><span class="item-icon" aria-hidden="true">${p.icon}</span>${p.name}<span class="item-meals">${p.meals.map(m=>`<i class="meal-dot meal-${m}" title="${meals[m].name}">${meals[m].name}</i>`).join('')}</span></span><span class="item-qty">${quantity(p)}</span>`;row.querySelector('input').addEventListener('change',e=>{e.target.checked?purchased.add(p.id):purchased.delete(p.id);persist();render();document.querySelector('#status').textContent='Zapisano'});section.append(row)}root.append(section)}
+      document.querySelector('#summary').textContent=`${bought} z ${pending+bought} kupionych`;document.querySelector('#progress').style.width=`${pending+bought?100*bought/(pending+bought):0}%`;
+      const boughtList=document.querySelector('#bought-list'),boughtItems=products.filter(p=>purchased.has(p.id));document.querySelector('#bought-count').textContent=boughtItems.length;boughtList.innerHTML=boughtItems.length?boughtItems.map(p=>`<div class="bought-item"><span>${p.name}</span><button class="restore" data-id="${p.id}" title="Przywróć na listę" aria-label="Przywróć ${p.name}">↶</button></div>`).join(''):'<p class="empty">Odhaczone produkty pojawią się tutaj. Kliknij, by przywrócić je na listę.</p>';boughtList.querySelectorAll('.restore').forEach(b=>b.addEventListener('click',()=>{purchased.delete(b.dataset.id);persist();render()}));
+    }
+    dayInput.addEventListener('change',()=>{days=Math.max(1,Math.min(30,Number(dayInput.value)||2));dayInput.value=days;persist();render();document.querySelector('#status').textContent='Ilości przeliczone'});
+    document.querySelector('#reset').addEventListener('click',()=>{purchased.clear();persist();render();document.querySelector('#status').textContent='Lista odświeżona'});
+    render();
+  </script>
+</body>
+</html>
